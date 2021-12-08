@@ -1,0 +1,112 @@
+What is seleinium?
+A tool for automating web applications
+
+--no desktop apllication can be automated using selenium
+--functional testing is done using selenium
+
+Components of Selenium Suite:
+1.Seleneium IDE, RC, WEbdriver, Grid
+
+Selenium 3,(combined webdriver and rc)
+
+
+Advantages:
+1.open source
+2.works with differnet languages and browsers
+3 not os dependent
+
+Disadvantages:
+1.no suppirt
+2.no buikt in reports
+3.no desktop application testing
+
+Webdriver -->Its an interface
+
+Steps to open chrome using selenium
+1.Set System Properties (key,value)
+key is the driver that we are using
+value is the path to that driver
+IF THE PATH IS INCORRECT WHAT WILL HAPPEN??
+the driver executable doesnt exist
+
+2.create an object of chromedriver()
+3.use method .get() and pass the url of the website that you want to launch
+
+
+--difference in quit()-->quits the whole browser vs close()-->is going to quit the current tab
+--navigate() vs get() -->using navigate method we can move forward , backwards and refresh but not with get
+
+--fullscreen() and maximixe() --> methods can be used to maximixe the window or show full screen
+
+
+----------HTML--------------
+<html>
+	<body>
+		<input name="moazzam"> (name is attribute ,moazzam is value of the attribute)
+	</body>
+</html>
+
+
+the webpage has an underlying html code
+--everything that we see on the webpage is basically appearing to us through some kind of code
+DOM-->Document Object Model
+
+WebElement:
+everything that appears on the webpage is called a webelement
+
+
+Locator:
+it is the address or the position of the WebElement on the page
+
+8 locators:
+1.id
+2.Name
+3.Tagname
+4.classname
+5.linktext
+6.partiallinktext
+7.xpath
+8.css
+
+a webelement have an underlying code
+this html code starts with a tag
+the tag may have different attributes
+these attributes are there to help locate those elements
+and in some cases define the other criterias
+
+
+--We must make sure that the locator that we are opting for
+is unique enough
+what if there are two same attribute with same values
+--selenium is going to return us the first one
+
+ID is the safest and most quick locator used
+
+Why do we need so many locators?
+--If the locator is not unqiue we can choose the one that is unique
+--the devlopers may not provide us with all the locators
+
+When do we get a noElement Exception?
+Selnium was unable to find the element that we are looking for
+GO CHECK YOUR LOCTAOR / ATTRIBUTE VALUE
+
+<a> is called anchor tag ,it contain link
+we can acces this using locator  "linktext or partiallink"
+
+
+
+
+
+
+
+
+***hw***
+navigate to https://parabank.parasoft.com/parabank/register.htm;jsessionid=B8DD31FF0AFEDBDF4454B27BBC5C05B0%22
+fill out the form
+click on register
+close the browser
+
+
+
+
+
