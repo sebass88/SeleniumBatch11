@@ -18,9 +18,10 @@ public class Task1 {
 
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
-        driver.manage().window().maximize();
+
 
         driver.get("https://www.amazon.com/");
+        driver.manage().window().maximize();
 
 
         List<WebElement>links=driver.findElements(By.tagName("a"));

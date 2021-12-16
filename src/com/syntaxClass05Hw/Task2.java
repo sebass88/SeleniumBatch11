@@ -19,9 +19,10 @@ public class Task2 {
 
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
-        driver.manage().window().maximize();
+
 
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
+        driver.manage().window().maximize();
 
         WebElement username=driver.findElement(By.cssSelector("input#txtUsername"));
         username.sendKeys("Admin");

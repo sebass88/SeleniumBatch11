@@ -16,9 +16,10 @@ public class Task3 {
 
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
-        driver.manage().window().maximize();
+
 
         driver.get("https://www.facebook.com/");
+        driver.manage().window().maximize();
         Thread.sleep(2000);
 
         WebElement cliq=driver.findElement(By.cssSelector("a[data-testid='open-registration-form-button'"));

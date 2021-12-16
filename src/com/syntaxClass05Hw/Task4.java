@@ -19,9 +19,10 @@ public class Task4 {
 
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
-        driver.manage().window().maximize();
+
 
         driver.get("http://ebay.com/");
+        driver.manage().window().maximize();
         Thread.sleep(2000);
 
         List<WebElement>categorie=driver.findElements(By.cssSelector("select.gh-sb"));
