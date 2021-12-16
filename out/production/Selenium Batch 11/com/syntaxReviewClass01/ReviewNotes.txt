@@ -1,0 +1,7 @@
+
+get()- further actions as back,forward, refresh is not possible
+navigate()-  further actions  such as back, forward  refresh is possible
+
+
+close()- close will only close the current tab
+quit()-

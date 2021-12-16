@@ -15,5 +15,7 @@ public class xpathUsingText {
         driver.get("https://syntaxprojects.com/");
         WebElement alertlink=driver.findElement(By.xpath("//a[text()='Alerts & Modals']"));
         alertlink.click();
+
+
     }
 }

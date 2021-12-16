@@ -10,16 +10,26 @@ public class forfun {
 
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
-        driver.get("http://www.google.com");
-
-        WebElement hello=driver.findElement(By.xpath("//input[@type='text']"));
-        hello.sendKeys("mikes america grill");
-        hello.submit();
+        driver.get("https://peru.com/");
+        driver.manage().window().maximize();
         Thread.sleep(2000);
 
-        WebElement cliq=driver.findElement(By.xpath("//h3['text()=']"));
-        cliq.click();
-        Thread.sleep(2000);
+       driver.findElement(By.xpath(" //a[text()='Fútbol']")).click();
+       Thread.sleep(2000);
+
+       driver.navigate().to("https://www.google.com/");
+       Thread.sleep(3000);
+
+       driver.navigate().to("http://www.espn.com");
+
+
+
+
+
+
+
+
+
 
 
 
