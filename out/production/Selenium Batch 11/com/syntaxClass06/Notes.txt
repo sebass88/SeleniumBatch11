@@ -1,0 +1,72 @@
+========================= Selenium Class 06==========================
+
+What is a drop down?
+
+1. single select--> one option
+
+2.multiple select--> more than one
+
+
+Two Methods to handle drop downs:
+ 1. Click on the drop down and the select the option.
+
+ 2. Use select class
+    Condition:
+    <select> tag is there in the drop down
+
+   Select class is a clas available to us in selenium which has
+   different methods that help us to handle the drop downs
+
+   Steps to use select class :
+   1. to find the webElement dropdown having the select class
+   2. Create an object of select class(webElement(which has the select tag))
+   3.Use any method provided by select class to select the option you desire
+        a. Byvalue()--> parameters the value attribute  "value in <options>" tag
+        b. Byindex()--> parameter the index of the option that you want to select
+        c. ByvisibleText()-->  parameter the text in the tag <option> which we want to select
+
+   4. .getOptions()--> no parameter returns us all the tags <options> which are child of <select tag>
+   return type is List<WebElements>
+
+   Multiple Select Drop down
+
+   1. isMultiple()---> if the drop down is multiselect or not
+
+   addtional methods:
+
+   a.deselectbyIndex()
+   b.deselectebyValue()
+   c.deselectbyVisibleText()
+   d.deselectall()
+   exception :
+   No such element exception--> the webelement you are looking for is not there on the page
+
+
+   Alerts:
+   a pop-up message, it takes the focus completely off the page
+   we cannot proceed in selenium until it is handled
+
+   3 Types of Alerts:
+        1.Web based alerts--> it is an html based alert/we can resolve them simply by inspecting
+
+        2.Javascript alerts/browser alerts --> we can handle them by inspecting ? No (because they don't have html),we
+        using switchTo method in Selenium
+
+        3.Windows based alerts: Cannot be handle with Selenium
+
+
+        Javascript Alerts:
+        3 types:
+          1. simple Alert----> click ok
+          2. confirmation Alert-----> either cancel or ok
+          3. Promp Alert----> enter text and cancel or ok
+
+
+          HOW TO HANDLE THESE JAVASCRIPT ALERTS IN SELENIUM
+            USING "alert interface"
+
+            the methods it gives us"
+                1.accept()
+                2.dismiss()
+                3.getText()
+                4.sendKeys()

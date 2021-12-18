@@ -6,39 +6,50 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.Iterator;
+import java.util.List;
+
 public class DropDown {
     public static void main(String[] args) throws InterruptedException {
 
 
-
-        System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
-        WebDriver driver=new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
         driver.get("https://syntaxprojects.com/basic-select-dropdown-demo.php");
 
         // find the web element drop down
-        WebElement days=driver.findElement(By.cssSelector("select#select-demo"));
+        WebElement days = driver.findElement(By.cssSelector("select#select-demo"));
 
 
         // use the select class to select from drop down
-        Select select=new Select(days);
+        Select select = new Select(days);
 
-       // select.selectByIndex(1);
+        // select.selectByIndex(1);
 
-       // Thread.sleep(2000);
+        // Thread.sleep(2000);
 
-       // select.selectByIndex(2);
+        // select.selectByIndex(2);
 
-       // Thread.sleep(2000);
+        // Thread.sleep(2000);
 
-       // select.selectByIndex(7);
+        // select.selectByIndex(7);
 
         // Select by Text
-       // select.deselectByVisibleText("Saturday");
+        // select.deselectByVisibleText("Saturday");
 
         // Select by value
-        select.selectByValue("Wednesday");
+        // select.selectByValue("Wednesday");
+
+        List<WebElement> allOptions = select.getOptions();
+        int size = allOptions.size();
+        System.out.println(size);
+
+        for(int i=0; i<size;i++){
+            String optiontext=allOptions.get(i).getText();
+            System.out.println(optiontext);
+        }
 
     }
 }
