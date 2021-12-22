@@ -1,0 +1,63 @@
+************************CLASS 07 NOTES*********************************
+Frames:
+indetify the Iframe:
+1. Right click and if you see view frame source it means it is a iframe
+2. The iframe are embedded in the webpgae under the tag <iframe> so search for //iframe and it will show
+you all the iframes available
+Example:
+        <html>
+          <body>
+                <iframe>  id=frame1?
+                    <html>
+                        <body>
+                        <body>
+                       </html>
+                       <iframe>
+
+
+
+
+
+
+
+
+
+There are 3 ways to interact with frames:
+1) by index
+2) by name or ID--> driver.switchTo().frame (String ID or name)
+3) by webelement--> driver.switchTo().frame(WebElement)--> pass in the webelement
+
+Default content()=== switching the focus back to the main page
+
+In alerts--> no need to switch back focus
+in frames--> we have to switch our focus back to home page
+
+
+*********Authentication Alerts************
+Authentication alerts we need to give user name and password
+in order to handle them we pass the parameters i.e username and password in the url
+
+https://admin::admin@the-internet.herokuapp.com/basic_auth
+
+How do u handle alerts in Selenium?
+
+By using Alert interface in selenium
+
+
+*****************Window Handles*******************
+
+Selenium treats windows and tabs almost same
+
+WindowHandle:
+a UniqueID the address of that window
+it is 40 characters alphanumeric
+
+Handling windows in Selenium:
+In order to handle them we will be using methods:
+
+1.getWindowHandle()--> give the address of the current window the selenium is focusing onto
+2.getWindowsHandles()--> gives the address of all the windows
+
+
+To Switch to a particular window
+Driver.switchTo.window

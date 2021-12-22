@@ -20,7 +20,10 @@ public class forfun {
        driver.navigate().to("https://www.google.com/");
        Thread.sleep(3000);
 
-       driver.navigate().to("http://www.espn.com");
+       driver.navigate().to("https://www.youtube.com/");
+       WebElement input=driver.findElement(By.cssSelector("input#search"));
+       input.sendKeys("spider no way home");
+       input.submit();
 
 
 
