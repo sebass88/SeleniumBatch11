@@ -59,6 +59,6 @@ public class WindowHandles {
         driver.switchTo().window(parenthandle);
         driver.findElement(By.cssSelector("button#messageWindowButton")).click();
 
-        driver.quit();
+
     }
 }
