@@ -55,5 +55,9 @@ it is 40 characters alphanumeric
 Handling windows in Selenium:
 In order to handle them we will be using methods:
 
-1.getWindowHandle()--> give the address of the curremt window the selenium is focusing onto
-2.getWindowsHandles()-->
+1.getWindowHandle()--> give the address of the current window the selenium is focusing onto
+2.getWindowsHandles()--> gives the address of all the windows
+
+
+To Switch to a particular window
+Driver.switchTo.window
