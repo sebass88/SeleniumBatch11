@@ -37,7 +37,7 @@ public class AlertsDemo1 {
         // cancel the alert
         confirmationAlert.dismiss();
 
-Thread.sleep(2000);
+        Thread.sleep(2000);
         // prompt alert
         // enable
         driver.findElement(By.cssSelector("button#prompt")).click();
@@ -52,6 +52,8 @@ Thread.sleep(2000);
 
         // use accept()
         promptAlert.accept();
+
+
 
 
 

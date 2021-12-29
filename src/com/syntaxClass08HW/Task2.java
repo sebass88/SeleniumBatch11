@@ -25,6 +25,6 @@ public class Task2 {
 
         driver.findElement(By.xpath("//input[@type='checkbox']")).click();
 
-        driver.quit();
+
     }
 }
