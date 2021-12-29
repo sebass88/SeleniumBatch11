@@ -1,0 +1,31 @@
+------------------------Selenium Class 09---------------------
+
+Selenium waits :
+    1.Why to avoid Thread.Sleep()??
+
+    <button> that takes 5 seconds to appear-->
+
+ --thread.sleep(1000);
+ -- find element statement--
+
+ Implicit Wait:
+  Will be applied to all the FindElement()
+  we use these waits to wait and find those elements which are not yet there in the Dom for a
+  specific threshold before we throw an exception
+
+
+  Explicit Wait:
+
+  goto the website
+  click on enable button after 10 seconds
+
+
+
+
+
+  WEBTABLES:
+  Webtables are elements on the webpage that have rows and columns
+
+  Types:
+  1.Static WebTables
+  2.Dynamic WebTables
