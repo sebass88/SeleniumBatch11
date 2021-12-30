@@ -1,0 +1,32 @@
+============================== Selenium Class 10=============================
+
+WebTables:
+static and dynamic
+rows and columns
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tables with Pagination:
+tables divided into several pages the navigation bar is called Pagination
+
+
+NoSuchElementException:
+1. the locator is wrong
+2. the element has not populated yet on the page
+
+The driver executable does not exist
+the driver path is not correct
+
+StaleElementException:
+1. The element that we are looking for is no longer there
+
