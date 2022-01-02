@@ -56,9 +56,10 @@ public class ExamplePagiNation {
             String text=tableRows.get(i).getText();
 //   check if the row contains the id we are looking for
             if(text.contains("26335A")){
-                WebElement chxbox=driver.findElement(By.cssSelector("input#ohrmList_chkSelectRecord_26335"));
+                System.out.println(" the index of the id in table is : "+i);
+                WebElement chxbox=driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr["+(i+1)+"]/td/input"));
                 chxbox.click();
-                System.out.println(text);
+
 //  we found the desired row so we need to end the while loop
                 notFound=false;
                 break;

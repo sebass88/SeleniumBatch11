@@ -1,0 +1,47 @@
+----------------------- Selenium Class 11-----------------------------
+
+WebTables:
+scenarios for stale element exception
+1. the element we are working with got refreshed
+2. the element is no longer there
+
+
+How to handle calendar with Pagination
+1. click on calendar
+2. locate the month and the year and ge the text
+
+
+
+
+
+-- Working with Keys
+in selenium we can replicate the behaviors of all the keys that are there on the keyboard using
+the enum keys.
+example
+    Keys.TAB
+    Keys.BackSpace
+
+
+--Taking a screenshot
+1. to prove that the test case passed or failed
+
+
+-- Action Class--
+ is given by selenium to capture the keyboard and mouse events such as:
+ 1. move to an element
+ 2. drag and drop
+ 3. Doule click
+ 4. Right click
+
+-- JavaScript Executor---
+ it is in selenium and can be executed on the browser
+ -- javaScriptExecutor allows us to execute javascript code
+ --javaScriptExecutor is an interface
+
+ Why and when should we use it?
+ only when selenium us unable to perform the operation
+ you are unable to click on a webelement
+
+ Using java script we can perform
+
+

@@ -1,4 +1,4 @@
-package ForFun;
+package com.syntaxClass11;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,11 +9,10 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Fun1 {
+public class CalendarsDemo {
     public static String url = "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login";
 
     public static void main(String[] args) throws InterruptedException {
-
 
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -32,39 +31,28 @@ public class Fun1 {
         driver.findElement(By.cssSelector("input#btnLogin")).click();
 
         driver.findElement(By.cssSelector("a#menu_leave_viewLeaveModule")).click();
-
+//      Open the calendar
         driver.findElement(By.xpath("//img[@class='ui-datepicker-trigger']")).click();
 
-        WebElement months=driver.findElement(By.xpath("//select[@class='ui-datepicker-month']"));
-        months.click();
-        Select select=new Select(months);
-        select.selectByIndex(5);
+        //      Find the Month
+        WebElement month=driver.findElement(By.cssSelector("select.ui-datepicker-month"));
+        Select select = new Select(month);
+        select.selectByVisibleText("Jun");
+        // Find the year
+        WebElement year = driver.findElement(By.cssSelector("select.ui-datepicker-year"));
+        Select select2= new Select(year);
+        select2.selectByValue("2023");
 
-        List<WebElement> date= driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td"));
-
-        for(WebElement dates:date){
-            if(dates.getText().equals("22")){
-                dates.click();
-                break;
+        // Find the date
+        List<WebElement> dates=driver.findElements(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr/td/a"));
+        for(WebElement date:dates){
+            String dateText=date.getText();
+            if(dateText.equalsIgnoreCase("15")){
+                date.click();
             }
         }
 
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id='calToDate']/following-sibling::img")).click();
 
-        WebElement rmonths=driver.findElement(By.xpath("//div[@class='ui-datepicker-title']/select"));
-        rmonths.click();
-
-        Select select1=new Select(rmonths);
-        select1.selectByIndex(7);
-
-        List<WebElement> day= driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td"));
-
-        for(WebElement days:day){
-            if(days.getText().equals("15")){
-                days.click();
-                break;
-            }
-        }
     }
+
 }
