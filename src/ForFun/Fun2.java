@@ -1,17 +1,18 @@
-package com.syntaxClass11;
+package ForFun;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
 
-public class UploadAFIle {
-    public static String url = "https://the-internet.herokuapp.com/upload";
+public class Fun2 {
+    public static String url="https://www.youtube.com/";
 
     public static void main(String[] args) throws InterruptedException {
-
 
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -20,18 +21,14 @@ public class UploadAFIle {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
 
-        //locate the choose file button
-        WebElement chooseFIle= driver.findElement(By.cssSelector("input#file-upload"));
+        WebElement search=driver.findElement(By.cssSelector("input#search"));
+        search.sendKeys("soccer goals");
+        Thread.sleep(2000);
 
-        // in order to upload the file
-        chooseFIle.sendKeys("C:\\Users\\Sebas\\Pictures\\Saved Pictures\\asghar.png");
+        WebElement cliq=driver.findElement(By.cssSelector("button#search-icon-legacy"));
+        cliq.click();
 
-
-        // locate the submit button and click upload
-        driver.findElement(By.cssSelector("input#file-submit")).click();
-
-
-
+        driver.findElement(By.cssSelector("#img")).click();
 
 
 

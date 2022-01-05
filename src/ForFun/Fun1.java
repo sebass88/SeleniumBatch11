@@ -1,11 +1,13 @@
 package ForFun;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.security.Key;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -24,12 +26,11 @@ public class Fun1 {
 
 //      for Username
         WebElement username = driver.findElement(By.cssSelector("input#txtUsername"));
-        username.sendKeys("Admin");
+        username.sendKeys("Admin", Keys.TAB);
 //      for password
         WebElement passw = driver.findElement(By.cssSelector("input#txtPassword"));
-        passw.sendKeys("Hum@nhrm123");
-//      for Login Button
-        driver.findElement(By.cssSelector("input#btnLogin")).click();
+        passw.sendKeys("Hum@nhrm123",Keys.ENTER);
+
 
         driver.findElement(By.cssSelector("a#menu_leave_viewLeaveModule")).click();
 

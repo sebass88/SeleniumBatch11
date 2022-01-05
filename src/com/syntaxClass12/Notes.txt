@@ -1,0 +1,31 @@
+-------------------------Selenium Class 12------------------------
+
+POM-- Page Object Model
+is a design pattern which allows  us to enhance test maintainance and
+reduce code duplication + improve readibility
+
+Advantages:
+    1.Code reuseability
+    2.Code Maintainability
+    3. Readibility
+
+
+
+PageFactory:
+ it is a class in selenium that allows us to interact with stored elements
+
+
+
+ public Webelement username-driver.findElement(By.id(""));
+
+
+ use this:
+ @FindBy(id=txtusername")
+ public WebElement userName
+
+ 1 more extra thing if you are using pagefactory
+ you need initialize your variables
+
+ public loginWithPageFactory(){
+        PageFactory.initElements(driver,this)
+ }
