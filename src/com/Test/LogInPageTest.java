@@ -1,9 +1,9 @@
-package Test;
+package com.Test;
 
-import Pages.LogInPage;
-import TestBase.BaseClass;
+import com.Pages.LogInPage;
+import com.TestBase.BaseClass;
 import org.openqa.selenium.WebElement;
-import utils.CommonMethods;
+import com.utils.CommonMethods;
 
 public class LogInPageTest {
     public static void main(String[] args) {

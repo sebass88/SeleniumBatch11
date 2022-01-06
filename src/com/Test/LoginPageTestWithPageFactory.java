@@ -1,7 +1,7 @@
-package Test;
+package com.Test;
 
-import Pages.loginPageWithPageFactory;
-import TestBase.BaseClass;
+import com.Pages.loginPageWithPageFactory;
+import com.TestBase.BaseClass;
 
 public class LoginPageTestWithPageFactory {
     public static void main(String[] args) {

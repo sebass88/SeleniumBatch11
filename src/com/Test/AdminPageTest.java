@@ -1,10 +1,10 @@
-package Test;
+package com.Test;
 
-import Pages.AdminPage;
-import Pages.loginPageWithPageFactory;
-import TestBase.BaseClass;
+import com.Pages.AdminPage;
+import com.Pages.loginPageWithPageFactory;
+import com.TestBase.BaseClass;
 import org.openqa.selenium.WebElement;
-import utils.CommonMethods;
+import com.utils.CommonMethods;
 
 public class AdminPageTest {
     public static void main(String[] args) {

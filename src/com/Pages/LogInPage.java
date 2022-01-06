@@ -1,9 +1,8 @@
-package Pages;
+package com.Pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import utils.CommonMethods;
+import com.utils.CommonMethods;
 
 public class LogInPage extends CommonMethods {
 
