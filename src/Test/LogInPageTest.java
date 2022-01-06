@@ -19,11 +19,14 @@ public class LogInPageTest {
         CommonMethods.sendText(username,"Admin");
 
 
+        WebElement password= logInPage.passwordField;
+        CommonMethods.sendText(password,"11513");
 
+        logInPage.loginbutton.click();
 
+        //Take the screen shot
 
-        //logInPage.passwordField.sendKeys("Hum@nhrm123");
-        //logInPage.loginbutton.click();
+        CommonMethods.takeTheScreenShot("loginPage");
 
 
 

@@ -1,0 +1,28 @@
+-------------------Selenium Review 05 ---------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--PageFactory
+1.@FindBy--> annotation
+    @FindBy(id="txtusername")-------------------> public webelement username=driver.findelement(By.id("textusername"));
+    public webelement username------------------->
+
+2. ---> call the constructor to initialize all the elements
+public void loginwithpageFactory(){
+        PageFactory.initElements(driver,this)
+}
+
+
+4.test----LoginPageTest

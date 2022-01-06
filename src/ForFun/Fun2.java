@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 
 import java.util.concurrent.TimeUnit;
 
@@ -29,6 +30,8 @@ public class Fun2 {
         cliq.click();
 
         driver.findElement(By.cssSelector("#img")).click();
+
+       
 
 
 
